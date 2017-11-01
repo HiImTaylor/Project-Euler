@@ -16,15 +16,19 @@ public class test {
 		first = 1;
 		second = 2;
 		next = first + second;
+		value += second;
 		System.out.println("First is: " + first + "	Second is: " + second + "	Next is: " + next);
 		
-		while(second < 4000000){
+		while(next < 4000000){
 			first = second;
 			second = next;
 			next = first + second;
+			if(second % 2 == 0) {
+				value += second;
+			}
 		}
 		
-		System.out.println("First is: " + first + "	Second is: " + second + "	Next is: " + next);
+		System.out.println("First is: " + first + "	Second is: " + second + "	Next is: " + next + " 	With value being: " + value);
 	}
 	
 }
